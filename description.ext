@@ -1,0 +1,17 @@
+#include "err\err.h"
+
+// MISSION DETAILS
+
+author = "Cam";
+onLoadName = "MISSION NAME";
+loadScreen = "loadscreen.paa";
+
+class Header
+{
+	gameType = Coop;
+};
+
+enableDebugConsole = 1;
+disableChannels[]={{2,true,true},{4,true,true},{6,true,true}};
+
+respawn = 1;
