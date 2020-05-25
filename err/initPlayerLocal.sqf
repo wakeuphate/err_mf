@@ -13,6 +13,9 @@
 5 enableChannel [false, false];
 6 enableChannel [false, false];
 
+// Add side-specific briefings.
+[] call err_briefing_fnc_playerInit;
+
 // Start the group marker loop.
 [] spawn err_markers_fnc_playerInit;
 
