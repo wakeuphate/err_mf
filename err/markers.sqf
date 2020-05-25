@@ -25,15 +25,26 @@ _str
 
 err_markers_fnc_getGroupId = {
 	params ["_group"];
+
+	// Check to see if the group variable as already been populated.
+	private _groupVariable = _group getVariable ["err_groupId", ""];
+	if (_groupVariable != "") exitWith { _groupVariable };
 	
 	private _leader = leader _group;
 	private _leaderDescription = (roleDescription _leader) splitString "@";
 
-	if (count _leaderDescription > 1) exitWith {
-		_leaderDescription select 1
+	private _groupId;
+	if (count _leaderDescription > 1) then {
+		_groupId = _leaderDescription select 1;
+	} else {
+		_groupId = "NO_NAME";
 	};
 
-"NO_NAME"
+	// Store the groupId on the group for future use.
+	// This is done to avoid issues when a group's leader dies.
+	_group setVariable ["err_groupId", _groupId, true];
+
+_groupId
 };
 
 err_markers_fnc_getMarkerColorFromId = {
