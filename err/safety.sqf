@@ -15,13 +15,13 @@ err_safety_fnc_addAdminAction = {
 };
 
 err_safety_fnc_playerInit = {
-	// In singleplayer or local multiplayer, safety should not be enabled.
-	if (!isMultiplayer || (isServer && !isDedicated)) exitWith {
+	// In singleplayer, safety should not be enabled.
+	if (!isMultiplayer) exitWith {
 		hint "Safety was not enabled, as you are not on a dedicated server."
 	};
 
 	// Admin should be given a special action to control safestart.
-	if (call BIS_fnc_admin > 0) then {
+	if (call BIS_fnc_admin > 0 || isServer) then {
 		[player] call err_safety_fnc_addAdminAction;
 	};
 
