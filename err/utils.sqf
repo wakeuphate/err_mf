@@ -6,7 +6,7 @@ err_utils_fnc_addActionWithConfirmation = {
 		_initialArgs params ["_unit", "_title", "_code", "_condition", "_distance"];
 
 		// Add confirmation action.
-		private _confirmActionId = _unit addAction ["<t color='#485946'>Confirm</t>", {
+		private _confirmActionId = _unit addAction ["<t color='#F2E205'>Confirm</t>", {
 			params ["_unit", "_caller", "_actionId", "_code"];
 
 			_unit removeAction _actionId;
