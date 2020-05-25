@@ -2,16 +2,14 @@
 
 // MISSION DETAILS
 
-author = "Cam";
+author = "AUTHOR";
 onLoadName = "MISSION NAME";
+onLoadMission = "MISSION DESCRIPTION";
+
+overviewPicture = "loadscreen.paa";
 loadScreen = "loadscreen.paa";
 
 class Header
 {
 	gameType = Coop;
 };
-
-enableDebugConsole = 1;
-disableChannels[]={{2,true,true},{4,true,true},{6,true,true}};
-
-respawn = 1;

@@ -1,3 +1,25 @@
+// Allows admin to access debug console.
+enableDebugConsole = 1;
+
+// No respawning.
+respawn = 1;
+
+// Disables AI for playable units, and prevents AI from taking control of disconnected players.
+// Fixes JIP, for some reason.
+disabledAI = 1;
+
+// Show AI kills on the scoreboard.
+aiKills = 1;
+
+// Disable teamSwitch.
+enableTeamSwitch = 0;
+
+// Disable saving.
+saving = 0;
+
+// Allow function recompilation in case of need to hotfix.
+allowFunctionsRecompile = 1;
+
 // Custom gear configs.
 class Gear {
 	#define SHORT_RANGE_RADIO "tf_anprc148jem"
