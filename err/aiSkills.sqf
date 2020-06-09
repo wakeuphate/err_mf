@@ -79,11 +79,16 @@ err_ai_fnc_setSkills = {
 	_x setSkill ["spotTime", 1];
 };
 
-err_ai_fnc_aiSkillLoop = {
+err_ai_fnc_aiSkillInit = {
 	waitUntil {
 		{
-			[_x] call err_ai_fnc_setSkills;
+			if (!(_x getVariable ["err_ai_skillInit", false])) then {
+				[_x] call err_ai_fnc_setSkills;
+				_x setVariable ["err_ai_skillInit", true, true];
+			};
 		} forEach allUnits;
+		sleep 60;
+
 	false
 	};
 };
