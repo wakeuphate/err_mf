@@ -1,8 +1,11 @@
-// Allows admin to access debug console.
-enableDebugConsole = 1;
+// Allows admins + listed UUIDs to access debug console.
+enableDebugConsole[] = {
+	"76561198004407978"
+};
 
-// No respawning.
-respawn = 1;
+// No respawning. Use Err_Spectator template for ACE/TFAR spectator.
+respawn = 0;
+respawnTemplates[] = {"Err_Spectator"};
 
 // Disables AI for playable units, and prevents AI from taking control of disconnected players.
 // Fixes JIP, for some reason.
