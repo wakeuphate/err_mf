@@ -5,4 +5,4 @@
 enableSaving [false, false];
 
 // Modify skills on any spawned AI groups.
-[] spawn err_ai_fnc_aiSkillLoop;
+[] spawn err_ai_fnc_aiSkillInit;
