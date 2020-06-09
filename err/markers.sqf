@@ -23,34 +23,6 @@ err_markers_fnc_stringReplace = {
 _str
 };
 
-err_markers_fnc_getGroupId = {
-	params ["_group"];
-
-	// Check to see if the group variable as already been populated.
-	private _groupVariable = _group getVariable "err_groupId";
-	if (!isNil "_groupVariable") exitWith { _groupVariable };
-	
-	private ["_groupId"];
-
-	private _leaderDescription = roleDescription (leader _group);
-	if (_leaderDescription == "") then {
-		_groupId = "NO_NAME";
-	} else {
-		private _splitDescription = _leaderDescription splitString "@";
-		if (count _splitDescription > 1) then {
-			_groupId = _splitDescription select 1;
-		} else {
-			_groupId = "NO_NAME";
-		};
-	};
-
-	// Store the groupId on the group for future use (globally).
-	// This is done to avoid issues when a group's leader dies.
-	_group setVariable ["err_groupId", _groupId, true];
-
-_groupId
-};
-
 err_markers_fnc_getMarkerColorFromId = {
 	params ["_id"];
 
@@ -113,8 +85,8 @@ err_markers_fnc_updateGroupMarker = {
 err_markers_fnc_playerInit = {
 	waitUntil {
 		{
-			private _groupId = [_x] call err_markers_fnc_getGroupId;
-			if (side _x == playerSide && _groupId != "NO_NAME") then {
+			private _groupId = groupId _x;
+			if (side _x == playerSide && _groupId != "" && alive (leader _x)) then {
 				private _mkrDetails = [_groupId] call err_markers_fnc_getMarkerDetailsFromId;
 				[_mkrDetails, _x] call err_markers_fnc_updateGroupMarker;
 			};
