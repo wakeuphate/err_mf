@@ -23,7 +23,7 @@ class USMC_D {
 
 		items[] = {"ItemMap", "ItemCompass", "ItemWatch"};
 
-		radios[] = {RIFLEMAN_RADIO};
+		radio = RIFLEMAN_RADIO;
 
 		uniformItems[] = {
 			{"ACE_fieldDressing", 4},
@@ -53,7 +53,7 @@ class USMC_D {
 
 		binoculars = "Binocular";
 
-		radios[] = {RIFLEMAN_RADIO, SHORT_RANGE_RADIO};
+		radio = SHORT_RANGE_RADIO;
 
 		vestItems[] = {
             {"rhsusf_mag_15Rnd_9x19_FMJ", 3},
@@ -76,13 +76,13 @@ class USMC_D {
 
 		vests[] = {"rhsusf_spcs_ucp_teamleader"};
 
-		radios[] = {RIFLEMAN_RADIO};
+		radio = RIFLEMAN_RADIO;
     };
 
     class Medic: Base {
 		vests[] = {"rhsusf_spcs_ucp_medic"};
 
-		radios[] = {RIFLEMAN_RADIO, SHORT_RANGE_RADIO};
+		radio = SHORT_RANGE_RADIO;
 
         uniformItems[] = {
 			{"SmokeShellGreen", 3},

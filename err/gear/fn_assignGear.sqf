@@ -57,6 +57,13 @@ if (_nvgs != "") then {
 	_unit addWeapon _nvgs;
 };
 
+// RADIO
+
+private _radio = [(_gearConfig >> 'radio')] call BIS_fnc_getCfgData;
+private _tfrRadioClass = [side _unit, _radio] call TFAR_fnc_getSideRadio;
+
+_unit linkItem _tfrRadioClass;
+
 // WEAPONS
 
 private _primaryWeapon = (_gearConfig >> "primaryWeapon") call BIS_fnc_getCfgData;
@@ -97,18 +104,6 @@ private _items = [(_gearConfig >> 'items')] call BIS_fnc_getCfgData;
 {
 	_unit linkItem _x;
 } forEach _items;
-
-// RADIOS
-
-private _radios = [(_gearConfig >> 'radios')] call BIS_fnc_getCfgData;
-
-{
-	if (_x == "tf_anprc154") then {
-		_unit linkItem _x;
-	} else {
-		_unit addItem _x;
-	};
-} forEach _radios;
 
 // HEAD / FACEGEAR
 
