@@ -19,7 +19,7 @@ class RU {
 
 		items[] = {"ItemMap", "ItemCompass", "ItemWatch"};
 
-		radios[] = {RIFLEMAN_RADIO};
+		radio = RIFLEMAN_RADIO;
 
 		uniformItems[] = {
 			{"ACE_fieldDressing", 4},
@@ -48,7 +48,7 @@ class RU {
 
 		binoculars = "Binocular";
 
-		radios[] = {SHORT_RANGE_RADIO, RIFLEMAN_RADIO};
+		radio = SHORT_RANGE_RADIO;
 
 		vestItems[] = {
             {"rhs_mag_9x18_8_57N181S", 3},
@@ -68,11 +68,11 @@ class RU {
 
     class FTL: SL {
 		headgear[] = {"rhs_6b27m_green"};
-		radios[] = {RIFLEMAN_RADIO};
+		radio = RIFLEMAN_RADIO;
     };
 
     class Medic: Base {
-		radios[] = {SHORT_RANGE_RADIO, RIFLEMAN_RADIO};
+		radio = SHORT_RANGE_RADIO;
 
         uniformItems[] = {
 			{"SmokeShellGreen", 3},
