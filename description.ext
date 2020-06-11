@@ -6,8 +6,8 @@ author = "AUTHOR";
 onLoadName = "MISSION NAME";
 onLoadMission = "MISSION DESCRIPTION";
 
-overviewPicture = "loadscreen.paa";
-loadScreen = "loadscreen.paa";
+overviewPicture = "x\err\addons\err_main\data\loadscreen.paa";
+loadScreen = "x\err\addons\err_main\data\loadscreen.paa";
 
 class Header
 {
