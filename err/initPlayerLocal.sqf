@@ -11,7 +11,7 @@
 3 enableChannel [true, false];
 4 enableChannel [false, false];
 5 enableChannel [false, false];
-6 enableChannel [false, false];
+6 enableChannel [true, false];
 
 // Add side-specific briefings.
 [] call err_briefing_fnc_playerInit;
