@@ -10,7 +10,7 @@ Side-specific briefings are available in `err/briefings`.
 
 ### Markers
 
-Each player is shown markers on all friendly groups in the mission, updated every second while a group has at least one alive member.
+Each player is shown markers on all friendly groups in the mission, updated every second (while a group has at least one alive member).
 
 These can be disabled by commenting out (adding a `//` to the beginning of the line) line 20 in `err/initPlayerLocal.sqf`, like so:
 
