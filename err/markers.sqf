@@ -89,8 +89,8 @@ err_markers_fnc_playerInit = {
 			private _sameSide = side _x == playerSide;
 			private _groupAlive = _groupId != "" && alive (leader _x);
 
-			// Only show markers on same side, unless player is in spectator.
-			if ((_sameSide || ace_spectator_isSet) &&  _groupAlive) then {
+			// Only show markers on same side.
+			if (_sameSide &&  _groupAlive) then {
 				private _mkrDetails = [_groupId] call err_markers_fnc_getMarkerDetailsFromId;
 				[_mkrDetails, _x] call err_markers_fnc_updateGroupMarker;
 			};
