@@ -8,6 +8,18 @@ Mission framework for http://sexyarmaboys.club
 
 Side-specific briefings are available in `err/briefings`.
 
+### Gear
+
+Gear scripts are defined in `err/gear/configs/`, with one file per faction. If you don't want to use these, you don't need to, and modifying unit loadouts using the ACE Arsenal is just as effective.
+
+To apply a gear loadout to a unit using a config, add the following line to a unit's init field in the editor:
+
+```
+  [this, "RU", "CO"] call err_gear_fn_assignGear;
+```
+
+If you do not wish to use the gear loadouts, just remove any lines of code from all units init fields. DO NOT remove any gear files or configs from the mission.
+
 ### Markers
 
 Each player is shown markers on all friendly groups in the mission, updated every second (while a group has at least one alive member).
