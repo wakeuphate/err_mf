@@ -28,13 +28,3 @@ allowFunctionsRecompile = 1;
 
 // Custom gear configs.
 #include "gear\gear.h"
-
-// Functions in cfgFunctions are loaded before the game begins, and can be used in unit init fields.
-class cfgFunctions {
-	class err_gear {
-		class Assign {
-			file = "err\gear";
-			class assignGear {};
-		};
-	};
-};
