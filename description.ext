@@ -6,11 +6,3 @@ author = "AUTHOR";
 onLoadName = "MISSION NAME";
 onLoadMission = "MISSION DESCRIPTION";
 overviewText = "MISSION DESCRIPTION";
-
-overviewPicture = "x\err\addons\err_main\data\loadscreen.paa";
-loadScreen = "x\err\addons\err_main\data\loadscreen.paa";
-
-class Header
-{
-	gameType = Coop;
-};
