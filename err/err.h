@@ -1,3 +1,11 @@
+class Header
+{
+	gameType = Coop;
+};
+
+overviewPicture = "x\err\addons\err_main\data\loadscreen.paa";
+loadScreen = "x\err\addons\err_main\data\loadscreen.paa";
+
 // No respawning. Use err_spectator template for ACE/TFAR spectator.
 respawn = 0;
 respawnTemplates[] = {"err_spectator"};
