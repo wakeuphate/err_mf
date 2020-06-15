@@ -10,15 +10,13 @@ Side-specific briefings are available in `err/briefings`.
 
 ### Gear
 
-Gear scripts are defined in `err/gear/configs/`, with one file per faction. If you don't want to use these, you don't need to, and modifying unit loadouts using the ACE Arsenal is just as effective.
+Gear is handled entirely through the use of the `ACE Arsenal`. Right-click on any unit in the editor and select `ACE Arsenal` to modify its uniform, vest, backpack, weapons and items.
 
-To apply a gear loadout to a unit using a config, add the following line to a unit's init field in the editor:
+A library of loadouts for different factions are available in the `Loadouts -> Default Loadouts` menu. These loadouts are updated regularly via an addon. If you wish to modify them for a particular mission, load the loadout from `Default loadouts` and then save your modifications to the `My loadouts` section. This new loadout will then be available on all of your missions.
 
-```
-  [this, "RU", "CO"] call err_gear_fn_assignGear;
-```
+Don't modify any loadouts in the `Default loadouts` section, as it will be overwritten when you re-open the `ACE Arsenal`. If you want to make changes to a 508 loadout and keep it for future use, you need to save your own loadout in `My loadouts`.
 
-If you do not wish to use the gear loadouts, just remove any lines of code from all units init fields. DO NOT remove any gear files or configs from the mission.
+Make sure you select `APPLY` in the bottom-right corner to apply the loadout to the unit you selected.
 
 ### Markers
 

@@ -25,6 +25,3 @@ saving = 0;
 
 // Allow function recompilation in case of need to hotfix.
 allowFunctionsRecompile = 1;
-
-// Custom gear configs.
-#include "gear\gear.h"
