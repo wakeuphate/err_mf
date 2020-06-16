@@ -53,17 +53,17 @@ Using a function from err_configs, you can allow group leaders to instantly depl
 
 ```
   [
-    true, 		        // Deployment enabled by default.
+    true,             // Deployment enabled by default.
                       // When true, all clients with deployment actions can deploy as soon as the mission begins.
                       // When false, `[true] call err_deploy_fnc_setDeploymentStatus` must be called on clients before they can deploy.
 
-    west,			        // Defending side.
+    west,             // Defending side.
     
-    ["defend_area"],	// List of defense area markers.
+    ["defend_area"],  // List of defense area markers.
                       // Only the defending side can deploy to these areas.
                       // When empty, defending side can deploy anywhere outside of attacking zones.
 
-    ["attack_area"]		// List of offense area markers.
+    ["attack_area"]   // List of attack area markers.
                       // Only the attacking side can deploy to these areas.
                       // When empty, attacking side can deploy anywhere outside of defending zones.
   ] call err_deploy_fnc_setupDeployment;
