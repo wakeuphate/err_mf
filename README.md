@@ -4,9 +4,13 @@ Mission framework for http://sexyarmaboys.club
 
 ## Components
 
+### Mission Information
+
+You can modify the mission name and description in `description.ext`.
+
 ### Briefings
 
-Side-specific briefings are available in `err/briefings`.
+Side-specific briefings are available in `err/briefings/`. Each file corresponds to the side of the players: `WEST.sqf` is for BLUFOR, `EAST.sqf` is for OPFOR, `GUER.sqf` is for INDFOR, and `CIV.sqf` is for any civilian players.
 
 ### Gear
 
