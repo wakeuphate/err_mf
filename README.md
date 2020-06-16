@@ -49,7 +49,7 @@ Uses simple respawn template from err_configs to setup ACE Spectator with all vi
 
 ### Group Deploy
 
-Using a function from err_configs, you can allow group leaders to instantly deploy their group using the map. This can be limited to placed markers, or allowed anywhere. Add the following code to `initPlayerLocal.sqf` and modify the parameters in order to do so:
+Using a function from err_configs, you can allow group leaders to instantly deploy their group using the map. This can be limited to placed markers, or allowed anywhere. Add the following code to `initServer.sqf` and modify the parameters in order to do so:
 
 ```
   [
@@ -69,6 +69,12 @@ Using a function from err_configs, you can allow group leaders to instantly depl
   ] call err_deploy_fnc_setupDeployment;
 ```
 
+Then, on any players you wish to allow to deploy, simple call `err_deploy_fnc_addDeployAction` from `initPlayerLocal.sqf`, like so:
+
+```
+  [player] call err_deploy_fnc_addDeployAction
+```
+
 In order to limit deploy functions to particular sides or units, you can use `if statements` to check the player the function is being called on, like below:
 
 ```
@@ -84,6 +90,8 @@ In order to limit deploy functions to particular sides or units, you can use `if
     // DEPLOY CODE GOES HERE
   };
 ```
+
+Always make sure that `err_deploy_fnc_setupDeployment` is called from `initServer.sqf`, and `err_deploy_fnc_addDeployAction` is called from `initPlayerLocal.sqf`. If you prefer to use the editor, `err_deploy_fnc_addDeployAction` calls can be added to any unit's init, instead.
 
 ### Custom scripts
 
