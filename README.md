@@ -72,7 +72,7 @@ Using a function from err_configs, you can allow group leaders to instantly depl
 Then, on any players you wish to allow to deploy, simple call `err_deploy_fnc_addDeployAction` from `initPlayerLocal.sqf`, like so:
 
 ```
-  [player] call err_deploy_fnc_addDeployAction
+  [player] call err_deploy_fnc_addDeployAction;
 ```
 
 In order to limit deploy functions to particular sides or units, you can use `if statements` to check the player the function is being called on, like below:
@@ -80,14 +80,14 @@ In order to limit deploy functions to particular sides or units, you can use `if
 ```
   // All BLUFOR leaders will get a deploy action:
   if (side player == west) then {
-    // DEPLOY CODE GOES HERE
+    [player] call err_deploy_fnc_addDeployAction;
   };
 ```
 
 ```
   // Only the Emir is allowed to deploy, inshallah:
   if (player == emir) then {
-    // DEPLOY CODE GOES HERE
+    [player] call err_deploy_fnc_addDeployAction;
   };
 ```
 
