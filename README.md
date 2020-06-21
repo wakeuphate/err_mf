@@ -26,6 +26,18 @@ Make sure you select `APPLY` in the bottom-right corner to apply the loadout to 
 
 Each player is shown markers on all friendly groups in the mission, updated every second (while a group has at least one alive member).
 
+The marker names and icons are derived from the group callsign, which can changed by double clicking on the group in the editor. All names will result in a marker being shown, but the table below shows pre-defined icon types and colours for particular names:
+
+| If callsign contains: | Colour        | Type          |
+| --------------------- | ------------- | ------------- |
+| Command               | Yellow        | b_hq          |
+| Alpha                 | Red           | b_inf         |
+| Bravo                 | Blue          | b_inf         |
+| Charlie               | Green         | b_inf         |
+| Delta                 | Purple        | b_inf         |
+
+Group names that do not include any of the above will be black, with the type b_inf.
+
 These can be disabled by commenting out (adding a `//` to the beginning of the line) line 20 in `err/initPlayerLocal.sqf`, like so:
 
 ```
