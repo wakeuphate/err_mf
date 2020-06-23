@@ -1,3 +1,5 @@
+#include "HAL.h"
+
 class Header
 {
 	gameType = Coop;
@@ -25,3 +27,10 @@ saving = 0;
 
 // Allow function recompilation in case of need to hotfix.
 allowFunctionsRecompile = 1;
+
+// By default, corpses are not removed, they must be added using addToRemainsCollector.
+// This is done automatically by HAL.
+corpseManagerMode = 0;
+corpseLimit = 30;
+corpseRemovalMinTime = 120;
+corpseRemovalMaxTime = 3600;
