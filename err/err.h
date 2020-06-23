@@ -12,6 +12,17 @@ loadScreen = "x\err\addons\err_main\data\loadscreen.paa";
 respawn = 0;
 respawnTemplates[] = {"err_spectator"};
 
+// Disable all VON channels and certain text channels.
+disableChannels[] = {
+	{ 0, false, true },
+	{ 1, false, true },
+	{ 2, true, true },
+	{ 3, false, true },
+	{ 4, true, true },
+	{ 5, true, true },
+	{ 6, false, true },
+};
+
 // Disables AI for playable units, and prevents AI from taking control of disconnected players.
 // Fixes JIP, for some reason.
 disabledAI = 1;
@@ -34,3 +45,7 @@ corpseManagerMode = 0;
 corpseLimit = 30;
 corpseRemovalMinTime = 120;
 corpseRemovalMaxTime = 3600;
+minPlayerDistance = 25;
+
+// Wrecks are never removed.
+wreckManagerMode = 0;
