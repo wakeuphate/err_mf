@@ -1,10 +1,22 @@
-// BRIEFING
+// Sections are added in last-to-first order
 
-// ====================================================================================
+// CREDITS
+
+player createDiaryRecord ["diary", ["Credits","
+<br/>
+*** Insert the author and any script/concept credits. ***
+"]];
+
+// ADMINISTRATION
+
+player createDiaryRecord ["diary", ["Administration","
+<br/>
+*** Insert information on administration and logistics here. ***
+"]];
 
 // SCENARIO
 
-_exe = player createDiaryRecord ["diary", ["Scenario","
+player createDiaryRecord ["diary", ["Scenario","
 <br/>	
 <font size='18'>SITUATION</font>
 <br/>
@@ -19,22 +31,9 @@ _exe = player createDiaryRecord ["diary", ["Scenario","
 *** Insert a description of enemy forces here. ***
 "]];
 
-// ====================================================================================
-
 // OBJECTIVES
 
-// The section outlines the objectives of the players.
-
-_mis = player createDiaryRecord ["diary", ["Objectives","
+player createDiaryRecord ["diary", ["Objectives","
 <br/>
 *** Insert the objectives here. ***
-"]];
-
-// ====================================================================================
-
-// ADMINISTRATION
-
-_adm = player createDiaryRecord ["diary", ["Administration","
-<br/>
-*** Insert information on administration and logistics here. ***
 "]];
