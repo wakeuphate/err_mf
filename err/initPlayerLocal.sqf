@@ -2,6 +2,7 @@
 [] call compile preProcessFileLineNumbers "err\briefing.sqf";
 [] call compile preprocessFileLineNumbers "err\markers.sqf";
 [] call compile preprocessFileLineNumbers "err\safety.sqf";
+[] call compile preprocessFileLineNumbers "err\jip.sqf";
 [] call compile preprocessFileLineNumbers "err\utils.sqf";
 
 // Add side-specific briefings.
@@ -12,3 +13,6 @@
 
 // Start the safety phase.
 [] spawn err_safety_fnc_playerInit;
+
+// Run JIP check.
+[] call err_jip_fnc_playerInit;
