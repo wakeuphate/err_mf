@@ -35,7 +35,7 @@ err_markers_fnc_getMarkerColorFromId = {
 	if (["Special Ops", _id, false] call BIS_fnc_inString) exitWith { "ColorOrange" };
 	if (["Quillon", _id, false] call BIS_fnc_inString) exitWith { "ColorOrange" };
 
-"ColorYwllow"
+"ColorYellow"
 };
 
 err_markers_fnc_getMarkerTypeFromId = {
