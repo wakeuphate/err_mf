@@ -1,10 +1,5 @@
 #include "HAL.h"
 
-class Header
-{
-	gameType = Coop;
-};
-
 overviewPicture = "x\err\addons\err_main\data\loadscreen.paa";
 loadScreen = "x\err\addons\err_main\data\loadscreen.paa";
 
